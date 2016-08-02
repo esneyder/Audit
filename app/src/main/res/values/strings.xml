@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Audit</string>
+    <string name="txt_main_title">Auditorias de FCV</string>
+    <string name="txt_ck_main">Auditorias IRD</string>
+    <string name="txt_btn_main_exit">Salir</string>
+    <string name="txt_btn_main_next">Aceptar</string>
+    <string name="txt_ck_aud_ven">Auditorias Vencimiento</string>
+    <string name="register_hint_name">Nombre auditor</string>
+    <string name="register_hint_rut">Rut</string>
+    <string name="register_hint_name_qf">Nombre QF</string>
+    <string name="register_hint_rut_qf">Rut QF</string>
+    <string name="register_num_store">Número tiendas</string>
+    <string name="register_hint_date">Seleccione fecha auditoría</string>
+    <string name="register_clean">Limpiar</string>
+    <string name="register_btn_import">Importar muestra</string>
+    <string name="register_btn_save">Guadar</string>
+    <string name="register_date">Ingreso de Datos</string>
+    <string name="err_msg_name">Debe ingresar el nombre del auditor</string>
+    <string name="err_msg_rut">Debe ingresar el rut</string>
+    <string name="err_msg_name_qf">Debe ingresar el nombre QF</string>
+    <string name="err_msg_rut_qf">Debe ingresar el rut QF</string>
+    <string name="err_msg_num_store">Debe ingresar el número de tiendas</string>
+    <string name="err_msg_date_audit">Seleccione la fecha de la uditoria</string>
+    <string name="err_msg_not_file">Debe cargar el archivo con los datos</string>
+    <string name="register_auditors">Auditores</string>
+    <string name="register_file">Datos cargados</string>
+</resources>
