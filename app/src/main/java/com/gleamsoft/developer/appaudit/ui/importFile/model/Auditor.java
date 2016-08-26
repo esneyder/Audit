@@ -9,9 +9,10 @@ import java.util.List;
 /**
  * Created by Developer on 1/08/2016.
  */
-@Table(name="Auditor")
+@Table(name="Auditor", id = "_id")
 public class Auditor extends Model {
-
+    @Column(name = "id")
+    private long id;
     @Column(name = "name")
     public String name;
     @Column(name = "rut")

@@ -3,6 +3,7 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".App"
@@ -16,6 +17,13 @@
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action android:name="android.intent.action.GET_CONTENT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+
+                <data android:mimeType="*/*"/>
             </intent-filter>
         </activity>
         <activity
@@ -30,13 +38,29 @@
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="1"/>
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.gleamsoft.developer.appaudit.ui.importFile.model.Auditor,com.gleamsoft.developer.appaudit.ui.importFile.model.DatosArchivo"/>
 
         <activity
             android:name=".ui.importFile.report.AuditorsActivity"
             android:label="@string/register_auditors">
         </activity>
-        <activity android:name=".ui.importFile.report.FileImportActivity"
-                  android:label="@string/register_file">
+        <activity
+            android:name=".ui.importFile.report.FileImportActivity"
+            android:label="@string/register_file">
+        </activity>
+        <activity
+            android:name=".countAudit.CountActivity"
+            android:label="@string/count">
+        </activity>
+        <activity android:name=".countAudit.UpdateCountActivity">
+        </activity>
+        <activity android:name=".pruebas.BarcodeActivity">
+        </activity>
+        <activity android:name=".ui.importFile.report.AuditReportAuditActivity">
+        </activity>
+        <activity android:name=".firm.DigitalDignatureActivity">
         </activity>
     </application>
 

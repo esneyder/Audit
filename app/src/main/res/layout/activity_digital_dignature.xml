@@ -8,14 +8,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.gleamsoft.developer.appaudit.ui.importFile.report.FileImportActivity">
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <ListView
-        android:id="@+id/listViewimport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
-    </HorizontalScrollView>
+    tools:context="com.gleamsoft.developer.appaudit.firm.DigitalDignatureActivity">
+
 </RelativeLayout>

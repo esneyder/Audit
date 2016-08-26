@@ -3,6 +3,7 @@ package com.gleamsoft.developer.appaudit.ui.importFile;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -89,6 +90,7 @@ protected void onCreate(Bundle savedInstanceState) {
     txtDate.setOnClickListener(this);
     btnSave.setOnClickListener(this);
     list.setOnClickListener(this);
+    btnclean.setOnClickListener(this);
 
 
 }
@@ -122,6 +124,9 @@ public void onClick(View id) {
     }
     if (id == list) {
         startActivity(new Intent(this, AuditorsActivity.class));
+    }
+    if(id==btnclean){
+        inputClear();
     }
 }
 
@@ -173,13 +178,14 @@ private static void save(String datafle, Auditor auditor) {
     String d = datafle.replace("|", ",");
     String[] arrayData = d.split(",");
     DatosArchivo datosArchivo = new DatosArchivo();
+        datosArchivo.hourcapture=Config.getHour()+":"+ Config.getMinute();
     for (int i = 0; i < arrayData.length; i++) {
-        //System.out.println(arrayData[0]);
         datosArchivo.numeration = arrayData[0];
-        datosArchivo.barcode = arrayData[1];
-        datosArchivo.description = arrayData[2];
-        datosArchivo.laboratory = arrayData[3];
-        datosArchivo.clasification = arrayData[4];
+        datosArchivo.sku = arrayData[1];
+        datosArchivo.barcode = arrayData[2];
+        datosArchivo.description = arrayData[3];
+        datosArchivo.laboratory = arrayData[4];
+        datosArchivo.clasification = arrayData[5];
         datosArchivo.auditor = auditor;
         datosArchivo.save();
     }
@@ -210,8 +216,19 @@ private void submitForm() {
     }else {
         readFromFile(this, txtRuteFile.getText().toString());
     DisplayToast("Registros guardados correctamente!.");
+      inputClear();
     }
 }
+
+private void inputClear() {
+    txtname.setText("");
+    txtrut.setText("");
+    txtnameqf.setText("");
+    txtrutqf.setText("");
+    txtnumstore.setText("");
+    txtDate.setText("");
+}
+
 private boolean validateName() {
     if (txtname.getText().toString().trim().isEmpty()) {
         inputLayoutName.setError(getString(R.string.err_msg_name));

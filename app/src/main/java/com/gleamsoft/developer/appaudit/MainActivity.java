@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.gleamsoft.developer.appaudit.pruebas.BarcodeActivity;
 import com.gleamsoft.developer.appaudit.ui.importFile.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -39,7 +40,8 @@ public void onClick(View view) {
         DisplayToast("Estamos trabajando en este proceso!");
     }
     if(view==btnExit){
-    finish();
+    //finish();
+        startActivity(new Intent(this, BarcodeActivity.class));
     }
     if(view==btnMainSetup){
         if(ckAuditIrd.isChecked())

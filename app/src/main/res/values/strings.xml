@@ -24,4 +24,12 @@
     <string name="err_msg_not_file">Debe cargar el archivo con los datos</string>
     <string name="register_auditors">Auditores</string>
     <string name="register_file">Datos cargados</string>
+    <string name="count_title">Conteo Auditoria FCV</string>
+    <string name="count_btn_back">Atras</string>
+    <string name="count_btn_next">Siguiente</string>
+    <string name="count">Conteo</string>
+    <string name="update_btn_print">Imprimir</string>
+    <string name="update_btn_gen_file">Generar Archivo</string>
+    <string name="mgs_count_update">Proceso terminado</string>
+    <string name="txt_search_null">Registro no encontrado</string>
 </resources>
